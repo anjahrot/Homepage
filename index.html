@@ -39,7 +39,7 @@
         <h2>My work</h2>
         <div class="projects">
             <div class="card">
-                <img src="" alt="">
+                <div class="box">screenshot of project</div>
                 <div class="card-heading">
                     <h3>Project name</h3>
                     <div class="icons">
@@ -50,7 +50,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium quae atque molestias quidem quos maiores ullam, fuga eum beatae adipisci rerum, totam cupiditate. Tempore tempora hic nihil corporis illo!</p>
             </div>
             <div class="card">
-                <img src="" alt="">
+                <div class="box">screenshot of project</div>
                 <div class="card-heading">
                     <h3>Project name</h3>
                     <div class="icons">
@@ -61,7 +61,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium quae atque molestias quidem quos maiores ullam, fuga eum beatae adipisci rerum, totam cupiditate. Tempore tempora hic nihil corporis illo!</p>
             </div>
             <div class="card">
-                <img src="" alt="">
+                <div class="box">screenshot of project</div>
                 <div class="card-heading">
                     <h3>Project name</h3>
                     <div class="icons">
@@ -72,7 +72,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium quae atque molestias quidem quos maiores ullam, fuga eum beatae adipisci rerum, totam cupiditate. Tempore tempora hic nihil corporis illo!</p>
             </div>
             <div class="card">
-                <img src="" alt="">
+                <div class="box">screenshot of project</div>
                 <div class="card-heading">
                     <h3>Project name</h3>
                     <div class="icons">
@@ -83,7 +83,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium quae atque molestias quidem quos maiores ullam, fuga eum beatae adipisci rerum, totam cupiditate. Tempore tempora hic nihil corporis illo!</p>
             </div>
             <div class="card">
-                <img src="" alt="">
+                <div class="box">screenshot of project</div>
                 <div class="card-heading">
                     <h3>Project name</h3>
                     <div class="icons">
@@ -94,7 +94,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa praesentium quae atque molestias quidem quos maiores ullam, fuga eum beatae adipisci rerum, totam cupiditate. Tempore tempora hic nihil corporis illo!</p>
             </div>
             <div class="card">
-                <img src="" alt="">
+                <div class="box">screenshot of project</div>
                 <div class="card-heading">
                     <h3>Project name</h3>
                     <div class="icons">
@@ -118,7 +118,7 @@
                 </div>  
                 <div class="email">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z" /></svg>
-                    <p>anne.rosewell.is.not.real@gmail.com</p>
+                    <p>anne.rosewell.not.real@gmail.com</p>
                 </div>
             </div>
             <div class="icons">
@@ -126,8 +126,21 @@
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-plain.svg" />
             </div>   
         </div>
-            <!-- Photo by Mikael Blomkvist: https://www.pexels.com/photo/a-woman-in-red-long-sleeve-shirt-6476783/ -->
-        <img src="images/pexels-mikael-blomkvist-6476783.jpg" alt="">
-    </footer>
+        <!-- Photo by Mikael Blomkvist: https://www.pexels.com/photo/a-woman-in-red-long-sleeve-shirt-6476783/ -->
+        <picture class="footer-img">
+            <source
+                srcset="images/pexels-mikael-blomkvist-6476783.jpg"
+                media="(min-width: 1000px)"
+            />
+            <source
+                srcset="images/pexels-mikael-blomkvist-6476783-crop.jpg"
+                media="(min-width: 600px)"
+            />
+            <img
+                src="images/pexels-mikael-blomkvist-6476783-small.jpg" 
+                alt="Anne Rosewell presenting for audience"
+            />                  
+        </picture>
+        </footer>
 </body>
 </html>

@@ -59,7 +59,7 @@ body {
 } 
 
 main {
-    padding: 10px 20px;
+    padding: 10px 30px;
 }
 
 /* Header */
@@ -126,7 +126,7 @@ header {
 /* Main */
 .projects {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 40px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -134,13 +134,26 @@ header {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 25px 30px;
     box-shadow: 6px 6px 8px -2px rgba(105, 105, 105, 0.5); 
+}
+
+.box {
+    background-color: rgba(247, 175, 43, 0.733);
+    color: white;
+    font-family: 'Playfair display', Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px;
 }
 
 .card-heading {
     display: flex;
     justify-content: space-between;
+    padding: 5px 30px;
+}
+
+.card > p {
+    padding: 0px 30px 40px 30px;
 }
 
 .icons {
@@ -177,7 +190,6 @@ footer {
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     justify-content: center;
 }
 
@@ -186,20 +198,27 @@ footer {
     gap: 10px;
 }
 
-footer > img {
+footer img {
     max-width: 100%;
 }
 
 @media (min-width: 600px) {
     main > h2, footer > h2 {
         text-align: left;
-        padding-left: 20px;
+    }
+    main, footer, .header-info {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .bg-box {
+        height: 600px;
     }
     .header-info {
         flex-direction: row;
         align-items: center;
         gap: 0px;
         padding-bottom: 40px;
+        margin-top: -580px;
     }
     .image-container > h1 {
         max-width: 100%;
@@ -207,9 +226,9 @@ footer > img {
         color: var(--color-text);
     }
     .about-container {
-    max-width: 40%;
-    padding: 20px 25px 20px 10px;
-    box-shadow: 6px 6px 8px -2px rgba(105, 105, 105, 0.5); 
+        max-width: 40%;
+        padding: 20px 25px 20px 10px;
+        box-shadow: 6px 6px 8px -2px rgba(105, 105, 105, 0.5); 
     }
     .about-container {
         align-items: flex-start;
@@ -219,9 +238,12 @@ footer > img {
         padding-right: 18px;
     }
     footer {
-        padding: 20px 30px 20px 15px;
         display: flex;
         gap: 10px;
+        padding: 20px;
+    }
+    .contact-info {
+        justify-content: center;
     }
     .contact-info > .icons {
         align-self: flex-start;
@@ -234,8 +256,12 @@ footer > img {
     .contact-info > p {
         font-size: 16px;
     }
-    footer > img {
+    .contact-details {
+        gap: 10px;
+    }
+    .footer-img {
         max-width: 60%;
+        align-self: center;
         justify-self: center;
         flex: 2;
     }
@@ -245,5 +271,12 @@ footer > img {
         height: auto;
         fill: white;
     }
+}
+
+@media (min-width: 1000px) {
+    .contact-info {
+        justify-content: flex-start;
+    }
+    
 }
 
