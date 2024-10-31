@@ -14,6 +14,12 @@ html{
     background-color: grey;
 }
 
+
+/* Not displayed on mobile screens */
+svg {
+    display: none;
+}
+
 .icons, .card-heading > img {
     width: 26px;
     height: auto;
@@ -91,6 +97,7 @@ header {
 }
 
 .image-container > h1 {
+    max-width: 60%;
     margin-top: -130px;
     margin-left: 20px;
     z-index: 1;
@@ -117,11 +124,6 @@ header {
 }
 
 /* Main */
-
-main > h2 {
-    padding: 10px 20px;
-}
-
 .projects {
     display: grid;
     grid-gap: 30px;
@@ -143,7 +145,7 @@ main > h2 {
 
 .icons {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     gap: 10px;
 }
 
@@ -151,37 +153,47 @@ main > h2 {
 footer {
     background-color: var(--topbottom-color);
     color: #ffffff;
-    padding-top: 10px;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 20px 20px;
+    padding: 10px 20px;
 }
 
 .contact-info > .icons {
     align-self: center;
 }
 
-.contact-info > p {
+.contact-info p {
     color: #ffffff;
 }
 
-footer > p:first-of-type {
+.contact-info > p {
     font-size: 20px;
 }
 
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.phone, .email {
+    display: flex;
+    gap: 10px;
+}
+
 footer > img {
-    padding: 0;
     max-width: 100%;
 }
 
 @media (min-width: 600px) {
     main > h2, footer > h2 {
         text-align: left;
-        padding-left: 30px;
+        padding-left: 20px;
     }
     .header-info {
         flex-direction: row;
@@ -189,10 +201,49 @@ footer > img {
         gap: 0px;
         padding-bottom: 40px;
     }
+    .image-container > h1 {
+        max-width: 100%;
+        margin-top: -80px;
+        color: var(--color-text);
+    }
     .about-container {
     max-width: 40%;
-    padding: 20px 25px;
+    padding: 20px 25px 20px 10px;
     box-shadow: 6px 6px 8px -2px rgba(105, 105, 105, 0.5); 
+    }
+    .about-container {
+        align-items: flex-start;
+    }
+    .about-container > .icons {
+        align-self:last baseline;
+        padding-right: 18px;
+    }
+    footer {
+        padding: 20px 30px 20px 15px;
+        display: flex;
+        gap: 10px;
+    }
+    .contact-info > .icons {
+        align-self: flex-start;
+        padding-left: 40px;
+        padding-top: 10px;
+    }
+    .contact-info > h2 {
+        text-align: left;
+    }
+    .contact-info > p {
+        font-size: 16px;
+    }
+    footer > img {
+        max-width: 60%;
+        justify-self: center;
+        flex: 2;
+    }
+    svg {
+        display: block;
+        width: 24px;
+        height: auto;
+        fill: white;
     }
 }
 
